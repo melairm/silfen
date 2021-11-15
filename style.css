@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Roboto:wght@300&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -11,13 +13,69 @@ html {
   justify-content: space-around;
   align-items: center;
 }
-
-p {
-  margin-left: 1rem;
-  padding: 0px;
-  /* padding: 9px 60px; */
+.navbar-links ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
+
+.navbar-links li{
+  list-style: none;
+}
+.navbar-links li a{
+  text-decoration: none;
+  margin: 1rem;
+  display: block;
+  color: black;
+}
+.navbar-links li:hover{
+  background-color: #EDFF00;
+}
+.toggle-button{
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  display: fnone;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar{
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .toggle-button{
+      display: flex;
+    }
+    .navbar-links{
+      display: none;
+      width: 100%;
+    }
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar-links ul{
+      width: 100%;
+      flex-direction: column;
+      
+    }
+    .navbar-links li{
+      text-align: center;
+}
+    .navbar-links.active{
+      display: flex;
+      
+    }
+}
+
 .logo {
+  background-image: url();
   justify-content: center;
   align-items: center;
   display: flex;
@@ -32,48 +90,39 @@ p {
   justify-content: space-around;
   align-items: center;
 }
-#profile {
+.smallicons{
+  display: flex;
+  flex-direction: row;
+  
+}
+.profile {
   background-image: url(./profile.svg);
   background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: 1rem;
-  padding: 9px 27px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
+  
 }
-#loop {
+.loop {
   background-image: url(./loop.svg);
   background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: 1rem;
-  border: none;
-  padding: 9px 27px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
 }
-#cart {
+.cart {
   background-image: url(./cart.svg);
   background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: 1rem;
-  border: none;
-  padding: 9px 27px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
 }
-#heart {
+.heart {
   background-image: url(./heart.svg);
   background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: 1rem;
-  border: none;
-  padding: 9px 27px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
 }
 .background {
   background-color: black;
@@ -198,13 +247,14 @@ main {
   /* margin: 2rem 2rem 0px 2rem; */
  
 }
-.carousel{
+.carousel1{
   /* display: flex;
   flex-direction: row; */
   border: 1px black solid;
   width: 200px;
   height: 200px;
   margin: 2rem;
+  justify-content: space-evenly;
 }
 .bigimg{
   border: 1px black solid;
@@ -218,34 +268,131 @@ main {
   height: 500px;
   margin: 2rem;
 }
-.icons{
-  height: 4rem;
-  width: 4rem;
-  background-image: url(../icons/recycled\ icon.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
+
 .colors{
   height: 4rem;
   width: 15rem;
-  
+  margin: 1rem;
   display: flex;
 }
 .color1{
   height: 2.5rem;
   width: 2.5rem;
   border: 1px solid black;
-  margin: 3px;
+  margin-right: 3px;
 }
 .color2{
   height: 2.5rem;
   width: 2.5rem;
   border: 1px solid black;
-  margin: 3px;
+  margin-right: 3px;
 }
 .color3{
   height: 2.5rem;
   width: 2.5rem;
   border: 1px solid black;
-  margin: 3px;
+  margin-right: 3px;
+}
+.sugestions h3{
+  text-align: center;
+}
+.productname{
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  margin-left: 1rem;
+}
+.pdescription{
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  margin-left: 1rem;
+}
+.viewmore{
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  border: none;
+  margin-left: 1rem;
+  cursor: pointer;
+  text-decoration: underline;
+  color: black;
+  padding: 0;
+  background-color: inherit;
+}
+.price{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  margin-left: 1rem;
+}
+.icons{
+  height: 4rem;
+  width: 4rem;
+  background-image: url(../icons/recycled\ icon.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: 1rem;
+}
+.addtocart{
+  margin-left: 1rem;
+  padding: 5px;
+  border-radius: 20px;
+  color: white;
+  background-color: black;
+}
+
+.carousel2{
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 2rem;
+}
+.carouselitem{
+  width: 20rem;
+}
+/* footer */
+footer{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid black;
+}
+.firstpart{
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+}
+.box1{
+  margin-right: 3rem;
+  
+}
+.box2, .box3, .box4, .box5{
+  padding-left: 4rem;
+  font-size: 13px;
+  
+}
+.box5 ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.box5 li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.box5 a{
+  text-decoration: none;
+}
+.secondpart{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.trademark{
+  margin: 1rem;
+}
+.someicons{
+  margin: 1rem;
 }
