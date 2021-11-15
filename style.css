@@ -185,3 +185,67 @@ main {
   /* grid-gap: 1rem; */
   justify-content: center;
 }
+
+/* product page */
+.productpg{
+  display: flex;
+  flex-direction: row;
+  
+  max-width: 1400px;
+  width: 100%;
+  min-height: 550px;
+  justify-content: center;
+  /* margin: 2rem 2rem 0px 2rem; */
+ 
+}
+.carousel{
+  /* display: flex;
+  flex-direction: row; */
+  border: 1px black solid;
+  width: 200px;
+  height: 200px;
+  margin: 2rem;
+}
+.bigimg{
+  border: 1px black solid;
+  width: 500px;
+  height: 500px;
+  margin: 2rem;
+}
+.description{
+  border: 1px black solid;
+  width: 400px;
+  height: 500px;
+  margin: 2rem;
+}
+.icons{
+  height: 4rem;
+  width: 4rem;
+  background-image: url(../icons/recycled\ icon.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.colors{
+  height: 4rem;
+  width: 15rem;
+  
+  display: flex;
+}
+.color1{
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid black;
+  margin: 3px;
+}
+.color2{
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid black;
+  margin: 3px;
+}
+.color3{
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid black;
+  margin: 3px;
+}
