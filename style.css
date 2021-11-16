@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Roboto:wght@300&display=swap');
 
+:root {
+  --primaryFontColor: #F3F3F3;
+  --secondaryFontColor: #EDFF00;
+  --primaryFont: "Roboto", sans-serif;
+  --secondaryFont: "Manrope", sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,10 +15,13 @@ html {
   padding: 0;
   margin: 0;
 }
+.firstnav{
+  display: flex;
+  justify-content: space-between;
+}
 .top-nav {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  
 }
 .navbar-links ul{
   margin: 0;
@@ -29,13 +39,13 @@ html {
   color: black;
 }
 .navbar-links li:hover{
-  background-color: #EDFF00;
+  background-color: var(--secondaryFontColor);
 }
 .toggle-button{
   position: absolute;
-  top: 1.5rem;
+  top: 0.5rem;
   left: 1rem;
-  display: fnone;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
@@ -46,6 +56,9 @@ html {
   width: 100%;
   background-color: black;
   border-radius: 10px;
+}
+.hidden {
+  visibility: hidden;
 }
 
 @media (max-width: 600px) {
@@ -59,6 +72,7 @@ html {
     .navbar {
       flex-direction: column;
       align-items: flex-start;
+      flex-wrap: wrap;
     }
     .navbar-links ul{
       width: 100%;
@@ -70,19 +84,23 @@ html {
 }
     .navbar-links.active{
       display: flex;
-      
+      margin-top: 2rem;
     }
+    .top-nav{
+      justify-content: space-evenly;
+    }
+    
 }
 
 .logo {
-  background-image: url();
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex: 1;
-  margin: 1rem;
-  width: 100px;
-  height: 50px;
+  background-image: url(./logo.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 12rem;
+  height: 3rem;
+  margin: 0px;
+  padding: 0px;
+
 }
 
 .middle-text {
@@ -237,15 +255,16 @@ main {
 
 /* product page */
 .productpg{
-  display: flex;
-  flex-direction: row;
-  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   max-width: 1400px;
   width: 100%;
   min-height: 550px;
   justify-content: center;
-  /* margin: 2rem 2rem 0px 2rem; */
- 
+}
+.boximages{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .carousel1{
   /* display: flex;
@@ -259,7 +278,7 @@ main {
 .bigimg{
   border: 1px black solid;
   width: 500px;
-  height: 500px;
+  display: block;
   margin: 2rem;
 }
 .description{
@@ -338,7 +357,28 @@ main {
   color: white;
   background-color: black;
 }
+@media only screen and (max-width: 1400px) {
 
+  .productpg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+ .bigimg{
+   max-width: 400px;
+   height: 500px;
+ }
+}
+@media only screen and (max-width: 800px) {
+  .boximages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .carousel1{
+    order:2;
+  }
+}
 .carousel2{
   display: grid;
   grid-template-columns: repeat(4, 300px);
@@ -356,7 +396,7 @@ footer{
   display: flex;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
-  border: 1px solid black;
+  background-color: #F3F3F3;
 }
 .firstpart{
   display: flex;
@@ -391,8 +431,47 @@ footer{
   justify-content: space-between;
 }
 .trademark{
-  margin: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 0px;
+}
+.trademark p{
+  font-size: 12px;
 }
 .someicons{
   margin: 1rem;
+}
+.smallflex{
+  display: flex;
+}
+.facebook{
+  background-image: url(./icons/facebook1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+.instagram{
+  background-image: url(./icons/instagram1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+.youtube{
+  background-image: url(./icons/youtube1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+.email{
+  background-image: url(./icons/email1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
 }
