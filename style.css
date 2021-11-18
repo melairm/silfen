@@ -135,7 +135,6 @@ main {
 }
 
 .images {
-
   display: flex;
   align-items: center;
   margin: 120px 0;
@@ -165,28 +164,32 @@ main {
   justify-items: right;
   margin-right: 1px;
 }
-.area {
+
+.container {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.entire-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container-img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #c4c4c4;
+}
+.secondheart {
+  display: block;
   width: 2rem;
   height: 1.8rem;
-  text-align: center;
-  font-size: 1.2rem;
-  display: inline-block;
-  vertical-align: bottom;
-}
-.container {
-  background-image: url(./bag1.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 200px;
-  height: 200px;
-  place-items: center;
+  align-self: center;
 }
 .small-image {
   height: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 18rem);
-  /* padding: 1rem; */
-  /* border: 2px black solid; */
-  /* grid-gap: 1rem; */
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  align-items: center;
   justify-content: center;
 }
