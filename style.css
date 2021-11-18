@@ -142,8 +142,9 @@ p {
   margin: 0.5rem;
 }
 .heart {
-  background-image: url(./heart.svg);
+  background-image: url(./icons/heart.jpeg);
   background-repeat: no-repeat;
+  background-size: 100%;
   width: 1.5rem;
   height: 1.5rem;
   margin: 0.5rem;
@@ -264,9 +265,12 @@ main {
   border: 1px solid #c4c4c4;
 }
 .secondheart {
-  display: block;
+  background-image: url(./icons/heart.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
   width: 2rem;
-  height: 1.8rem;
+  height: 2rem;
+  display: block;
   align-self: center;
 }
 .small-image {
