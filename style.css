@@ -60,7 +60,10 @@ html {
 .hidden {
   visibility: hidden;
 }
-
+img{
+  max-width: 100%;
+  height: auto;
+}
 @media (max-width: 600px) {
     .toggle-button{
       display: flex;
@@ -368,6 +371,7 @@ main {
    max-width: 400px;
    height: 500px;
  }
+ 
 }
 @media only screen and (max-width: 800px) {
   .boximages {
@@ -378,10 +382,17 @@ main {
   .carousel1{
     order:2;
   }
+  .firstpart{
+    flex-direction: column;
+  }
+  .secondpart{
+    flex-direction: row;
+  }
+  
 }
 .carousel2{
   display: grid;
-  grid-template-columns: repeat(4, 300px);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2.5rem;
   align-items: center;
   justify-content: center;
@@ -401,14 +412,12 @@ footer{
 .firstpart{
   display: flex;
   padding: 1rem;
+  padding-left: 1rem;
   justify-content: space-between;
 }
-.box1{
-  margin-right: 3rem;
-  
-}
+
 .box2, .box3, .box4, .box5{
-  padding-left: 4rem;
+  /* padding-left: 4rem; */
   font-size: 13px;
   
 }
