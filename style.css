@@ -114,27 +114,32 @@ main {
   display: inline-block;
 }
 .bag_2 {
-  margin-left: auto;
+  /* margin-left: auto;
   margin-right: 1rem;
   border: none;
   padding: 9px 27px;
   text-decoration: none;
-  display: inline-block;
-}
-.column,
-.column-2 {
-  float: left;
+  display: inline-block; */
+  min-width: 400px;
+  max-width: 700px;
   width: 50%;
-  padding: 10px;
+  display: block;
+  margin-left: 2vw;
+}
+.bag {
+  min-width: 400px;
+  max-width: 700px;
+  width: 50%;
+  display: block;
+  margin-right: 2vw;
 }
 
 .images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 0px;
-  padding: 0px;
-  margin-left: 3rem;
-  margin-right: 1rem;
+
+  display: flex;
+  align-items: center;
+  margin: 120px 0;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 1000px) {
