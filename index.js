@@ -1,3 +1,4 @@
+const urlParams = new URLSearchParams(window.location.search);
 fetch("http://mcvcreate.com/wp_silfen/wp-json/wp/v2/bag/?_embed")
   .then((res) => res.json())
   .then(gotData);
